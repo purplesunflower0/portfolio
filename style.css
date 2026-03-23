@@ -117,10 +117,22 @@ h1.section-title {
     font-size: 2.5rem;
     color: #ffffff;
     margin-top: 0;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem; 
     font-weight: 700;
     letter-spacing: 1px;
-    text-align: center;
+    background-color: #1e293b; 
+    border-radius: 20px;
+    
+    /* 1. Left-align the text */
+    text-align: center; 
+    
+    /* 2. Match the exact width of your project cards */
+    max-width: 900px; 
+    width: 100%; 
+    
+    /* 3. Add a subtle accent line to ground the title */
+    border-bottom: 2px solid #334155; 
+    padding-bottom: 1rem; 
 }
 
 .projects-container {
