@@ -388,3 +388,120 @@ footer {
     font-weight: 700;
     border: 1px solid #334155;
 }
+/* --- NEW 2x2 PROJECT GRID LAYOUT --- */
+.projects-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 2.5rem; /* Increased gap for more breathing room between categories */
+    max-width: 1400px; /* Increased to let the grid stretch wider */
+    width: 95%; /* Ensures it uses most of the screen width */
+    margin: 0 auto;
+    padding: 2rem 0; 
+}
+
+.category-block {
+    background: rgba(30, 41, 59, 0.3);
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 2rem; /* Increased padding inside the main category blocks */
+    display: flex;
+    flex-direction: column;
+}
+
+.category-header h2 {
+    font-size: 1.4rem;
+    color: #e2e8f0;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #38bdf8;
+    display: inline-block;
+}
+
+.category-header i {
+    margin-right: 8px;
+    color: #38bdf8;
+}
+
+/* Internal grid for multiple projects inside a category */
+/* Internal grid for multiple projects inside a category */
+/* Internal grid for multiple projects inside a category */
+.category-projects {
+    display: flex;
+    flex-direction: column; 
+    gap: 1.5rem; 
+    
+    /* THE SCROLL MAGIC */
+    max-height: 450px; 
+    overflow-y: auto;  
+    padding-right: 15px; 
+
+    /* HIDES SCROLLBAR IN FIREFOX & EDGE */
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+/* Individual Card Styling */
+.mini-project-card {
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    padding: 1.8rem;
+    
+    width: 100%; /* This forces the card to take up the whole horizontal area */
+    box-sizing: border-box; /* Ensures padding doesn't push the card outside its container */
+    
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.mini-project-card:hover {
+    transform: translateY(-3px);
+    border-color: #38bdf8;
+}
+
+.mini-project-card h3 {
+    font-size: 1.1rem;
+    color: #f8fafc;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.mini-project-card p {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    line-height: 1.4;
+    margin-bottom: 1.5rem; /* Added margin to push buttons down slightly */
+}
+
+.button-group-mini {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-mini {
+    background: #1e293b;
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-mini:hover {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+    .projects-grid-layout {
+        grid-template-columns: 1fr; 
+    }
+}
