@@ -505,3 +505,41 @@ footer {
         grid-template-columns: 1fr; 
     }
 }
+/* --- MOBILE RESPONSIVENESS (PHONES & TABLETS) --- */
+@media (max-width: 768px) {
+    /* 1. Stack the main category grid into a single column */
+    .projects-grid-layout {
+        grid-template-columns: 1fr; /* Changes from 2 columns to 1 column */
+        width: 100%;
+        padding: 1rem; /* Reduces outer padding for small screens */
+    }
+
+    /* 2. Stack the header navigation nicely */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* 3. Reduce padding inside the blocks so text isn't squeezed */
+    .category-block {
+        padding: 1rem; 
+    }
+
+    .mini-project-card {
+        padding: 1.2rem;
+    }
+
+    /* 4. Adjust the scrollable container height for phones */
+    .category-projects {
+        max-height: 350px; /* Slightly shorter scroll box for mobile */
+    }
+}
